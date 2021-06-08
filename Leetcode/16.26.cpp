@@ -8,7 +8,7 @@ using namespace std;
 
 class Solution {
 public:
-    int calculate(string s,int l,int r) {
+    int calculate_s(string s,int l,int r) {
         int p=-1;int maxn=INT_MIN;//记录当前的最小优先级
         int nums=0;//记录括号的个数
         //接下来这里最重要的是找出优先级最低的符号
@@ -56,8 +56,8 @@ public:
             }
             return ans;
         }
-        int a=calculate(s,l,p-1);
-        int b=calculate(s,p+1,r);
+        int a=calculate_s(s,l,p-1);
+        int b=calculate_s(s,p+1,r);
         if(s[p]=='/'){
             return a/b;
         }
@@ -76,6 +76,6 @@ public:
 int main (){
     Solution test;
     string test_data="3+2*2*2";
-    cout<<test_data<<"="<<test.calculate(test_data,0,test_data.size()-1);
+    cout<<test_data<<"="<<test.calculate_s(test_data,0,test_data.size()-1);
     return 0;
 }
