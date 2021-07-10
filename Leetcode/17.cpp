@@ -8,7 +8,7 @@ public:
     string chartostr(char temp []){
     	string ans="";
 		for(int i=0;i<strlen(temp);i++){
-            cout<<i<<endl;
+            //cout<<i<<endl;
 			ans+=temp[i];
 		} 
 		return ans ;
@@ -30,7 +30,7 @@ public:
     }
     void dfs(int loc){
     	if(loc==limit_data){
-    		cout<<"setup\n";
+    		//cout<<"setup\n";
     		ans.push_back(chartostr(temp));
 			return ;
 		}
@@ -68,7 +68,7 @@ public:
 };
 int main (){
 	Solution test;
-	string test_data= "23";
+	string test_data; cin>>test_data;
 	vector<string> ans = test.letterCombinations(test_data);
 	for(int i=0;i<ans.size();i++){
 		cout<<ans[i]<<endl;
